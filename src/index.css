@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  margin: 20px;
+  padding: 0;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif; /* Use Poppins, or any Google Font */
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color:maroon;
+  margin: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.game {
+  display: flex;
+  justify-content: center;  
+  align-items: flex-center; 
+  gap: 40px;
+  padding-top: 90px;           
+  flex-direction: row;   
+}
+.board-row {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 80px
+}
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.square {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.status {
+  font-size: 24px;
+  margin-bottom: 20px; /* Space between status and the board */
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transform: scale(1.35)  /* Space between board and game info */
+}
+
+.square {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  font-size: 2rem;         /* Larger text inside squares */
+  font-weight: bold;
+  line-height: 80px;       /* Center text vertically */
+  height: 80px;            /* Increase square size */
+  width: 80px;  
+  color: black;           /* Increase square size */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* 3D shadow effect */
+  backdrop-filter: blur(6px); /* Glass effect: blurred background */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.square:hover {
+  background-color: rgba(255, 255, 255, 0.6);  /* Slightly change background on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Hover effect */
+}
+
+/* Make sure the game info is well-spaced */
+.game-info {
+  margin-left: 20px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.game-info ol {
+  text-align: left;  /* Align the moves to the left */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+button {
+  background: linear-gradient(135deg, #d13636, #de2121); /* Gradient color */
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #d13636, #de2121); /* Reverse gradient */
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(1);
+}
+/* Ensure body spacing is clean */
+body {
+  background-color:#A8DF8E;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
